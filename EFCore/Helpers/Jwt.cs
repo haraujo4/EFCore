@@ -16,7 +16,7 @@ public static class Jwt
         {
             Subject = new ClaimsIdentity(new Claim[]
             {
-                new Claim("Id", usuario.Id.ToString()), // Use "Id" aqui
+                new Claim("Id", usuario.Id.ToString()),
                 new Claim(ClaimTypes.Role, usuario.Id.ToString())
             }),
             Expires = DateTime.UtcNow.AddHours(2),
